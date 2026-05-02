@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #fdf6ec;
+  --cream-dark: #f5e6d3;
+  --rose-gold: #b76e79;
+  --rose-gold-light: #e8b4b8;
+  --rose-gold-dark: #8b4f58;
+  --slate: #4a5568;
+  --slate-light: #718096;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--slate);
+}
+
+.bg-cream-50 {
+  background-color: #fdf6ec;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold text-white transition-all duration-200 shadow-md hover:shadow-lg active:scale-95;
+  background: linear-gradient(135deg, #b76e79, #8b4f58);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #c47d88, #9a5e67);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-semibold transition-all duration-200 border-2 active:scale-95;
+  color: var(--rose-gold-dark);
+  border-color: var(--rose-gold-light);
+  background: white;
+}
+
+.btn-secondary:hover {
+  background-color: var(--cream-dark);
+}
+
+.btn-danger {
+  @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium text-white text-sm transition-all duration-200 active:scale-95;
+  background: linear-gradient(135deg, #e53e3e, #c53030);
+}
+
+.card {
+  @apply bg-white rounded-2xl shadow-md border overflow-hidden transition-all duration-200;
+  border-color: #f0ddd5;
+}
+
+.card:hover {
+  @apply shadow-lg;
+  transform: translateY(-2px);
+}
+
+.input-field {
+  @apply w-full rounded-xl border px-4 py-3 text-sm focus:outline-none focus:ring-2 transition-all duration-150;
+  border-color: #e8b4b8;
+  color: var(--slate);
+  background: #fffaf8;
+}
+
+.input-field:focus {
+  border-color: var(--rose-gold);
+  ring-color: var(--rose-gold-light);
+  box-shadow: 0 0 0 3px rgba(183, 110, 121, 0.15);
+}
+
+.section-title {
+  @apply text-2xl font-bold tracking-tight;
+  color: var(--rose-gold-dark);
+}
+
+.badge-bride {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.badge-groom {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-usd {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge-khr {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.summary-card {
+  @apply rounded-2xl p-5 text-center;
+}
+
+.divider {
+  @apply border-t my-6;
+  border-color: #f0ddd5;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--rose-gold-light); border-radius: 3px; }
